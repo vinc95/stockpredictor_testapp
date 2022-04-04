@@ -8,7 +8,7 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title("Stock Prediction Web App")
 
-stocks = ("0208.KL","AAPL","GOOG","FB","MSFT","GME")
+stocks = ("AAPL",,"AMZN","FB","GME","GOOG","MSFT","NIO","TSLA")
 selected_stock = st.selectbox("Select dataset for prediction", stocks)
 
 n_years = st.slider("Years of prediction:", 1, 10)
@@ -23,8 +23,6 @@ def load_data(ticker):
 
 data_load_state = st.text("Data is loading...")
 data = load_data(selected_stock)
-#data_load_state.text("Loading Data... Taadaa... DONE!")
-
 
 st.subheader('Raw data')
 st.write(data.tail())
