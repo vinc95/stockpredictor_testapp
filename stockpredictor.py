@@ -32,14 +32,14 @@ st.subheader('Raw data')
 st.write(data.tail())
 
 
-def plot_raw_data():
-    fig = plt.Figure()
-    plt.scatter(x=data['Date'], y=data['Open'], c='b', marker='x', label='stock_open')
-    plt.scatter(x=data['Date'], y=data['Close'], c='r', marker='s', label='close')
-    ###fig.layout.update(title_text="Time Series Data", xaxis_rangeslider_visible=True)
-    st.plotly_chart(fig)
+#def plot_raw_data():
+#    fig = plt.Figure()
+#    plt.scatter(x=data['Date'], y=data['Open'], c='b', marker='x', label='stock_open')
+#    plt.scatter(x=data['Date'], y=data['Close'], c='r', marker='s', label='close')
+#    ###fig.layout.update(title_text="Time Series Data", xaxis_rangeslider_visible=True)
+#    st.plotly_chart(fig)
 
-plot_raw_data()
+# plot_raw_data()
 
 
 #Forecasting
