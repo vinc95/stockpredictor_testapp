@@ -6,3 +6,4 @@ scikit-learn==0.22.2
 pystan==2.19.1.1
 fbprophet==0.7.1
 yfinance==0.1.63
+setuptools==60.0.0
