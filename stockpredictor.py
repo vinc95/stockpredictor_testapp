@@ -2,7 +2,6 @@ import streamlit as st
 import yfinance as yf
 from datetime import date
 from fbprophet import Prophet
-from fbprophet.plot import plot_plotly
 
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
