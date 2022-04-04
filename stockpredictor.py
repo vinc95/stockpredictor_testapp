@@ -3,7 +3,6 @@ import yfinance as yf
 from datetime import date
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly 
-from matplotlib import pyplot as plt
 
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
@@ -25,21 +24,17 @@ def load_data(ticker):
 
 data_load_state = st.text("Data is loading...")
 data = load_data(selected_stock)
-data_load_state.text("Loading Data... Taadaa... DONE!")
+#data_load_state.text("Loading Data... Taadaa... DONE!")
 
 
 st.subheader('Raw data')
 st.write(data.tail())
 
 
-#def plot_raw_data():
-#    fig = plt.Figure()
-#    plt.scatter(x=data['Date'], y=data['Open'], c='b', marker='x', label='stock_open')
-#    plt.scatter(x=data['Date'], y=data['Close'], c='r', marker='s', label='close')
-#    ###fig.layout.update(title_text="Time Series Data", xaxis_rangeslider_visible=True)
-#    st.plotly_chart(fig)
-
-# plot_raw_data()
+def plot_raw_data():
+    fig = plt.Figure()
+    st.plotly_chart(fig)
+plot_raw_data()
 
 
 #Forecasting
