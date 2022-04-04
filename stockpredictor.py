@@ -30,13 +30,6 @@ data = load_data(selected_stock)
 st.subheader('Raw data')
 st.write(data.tail())
 
-
-def plot_raw_data():
-    fig = plt.Figure()
-    st.plotly_chart(fig)
-plot_raw_data()
-
-
 #Forecasting
 df_train = data[['Date','Close']]
 df_train = df_train.rename(columns={"Date": "ds", "Close": "y"})
