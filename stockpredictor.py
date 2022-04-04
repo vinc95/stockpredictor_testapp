@@ -52,7 +52,7 @@ future = m.make_future_dataframe(periods=period)
 forecast = m.predict(future)
 
 st.subheader('Forecast data')
-st.write(Forecast.tail())
+st.write(forecast.tail())
 
 st.write('forecast data')
 fig1 = plot_plotly(m, forecast)
