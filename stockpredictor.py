@@ -8,6 +8,16 @@ TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title("Stock Prediction Web App")
 
+st.sidebar.write("""
+This is a mini web app demo project using python libraries such as Streamlit, fbprophet etc
+""")
+
+st.sidebar.write ("This stock price predictor used the data from 2015-01-01 until today as a reference to predict the stock price for the future.")
+
+st.sidebar.write ("For more info, please contact:")
+
+st.sidebar.write("<a href='https://www.linkedin.com/in/jiajunlok/'>Lok Jia Jun </a>", unsafe_allow_html=True)
+
 stocks = ("AAPL","AMZN","FB","GME","GOOG","MSFT","NIO","TSLA")
 selected_stock = st.selectbox("Select dataset for prediction", stocks)
 
