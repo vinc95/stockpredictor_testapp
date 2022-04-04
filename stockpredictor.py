@@ -1,9 +1,3 @@
-!pip install yfinance
-!pip install pystan
-!pip install cmdstanpy==0.9.68
-!pip install prophet
-!pip install fbprophet
-
 import streamlit as st
 from datetime import date
 
